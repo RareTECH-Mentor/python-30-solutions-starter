@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 EXPECTED=$(
 cat << 'EOF'
 1行目: 名前を入力してください：Hello、<name>!
