@@ -6,6 +6,17 @@
 
 ---
 
+### 事前準備
+
+データクラスの使用には、
+標準ライブラリ`dataclasses`から`dataclass`デコレータのインポートが必要です。
+
+以下を`models.py`に書いて、models.py内でデータクラスが使用できる状態にしましょう。
+
+```
+from dataclasses import dataclass
+```
+
 ### 問１：データクラスを定義しよう
 
 `Person`というデータクラスを`models.py`内に作成してください。
