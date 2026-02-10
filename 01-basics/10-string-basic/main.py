@@ -1,18 +1,18 @@
-# Q01: String Basic
-# 文字列を作成して表示する
-message = "Hello" #文字列を作成する
-print(message) #文字列を表示する
+# Q01: String Split
+# 文字列をsplit()メソッドで分割してみましょう
+text = "apple,banana,orange"
+fruits = text.split(",")
+print(fruits)
 
-# Q02: String Concatenation
-# 文字列を連結して表示する
-greeting = "Hello" #文字列を作成する
-world = "World" #文字列を作成する
-result = greeting + " " + world #文字列を連結する
-print(result) #連結した文字列を表示する
+# Q02: String Join
+# リストをjoin()メソッドで結合してみましょう
+words = ["Hello", "World", "Python"]
+result = " ".join(words)
+print(result)
 
-# Q03: String Methods
-# 文字列を大文字に変換して表示する
-text = "hello" #文字列を作成する
-uppercase = text.upper() #文字列を大文字に変換する
-print(uppercase) #大文字に変換した文字列を表示する
-
+# Q03: Split and Join
+# 文字列を分割して、別の区切り文字で結合してみましょう
+sentence = "one-two-three"
+parts = sentence.split("-")
+new_sentence = "_".join(parts)
+print(new_sentence)
