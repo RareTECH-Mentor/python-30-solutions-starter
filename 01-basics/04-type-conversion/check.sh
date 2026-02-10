@@ -1,54 +1,23 @@
-#!/usr/bin/env bash
-set -euo pipefail
+#!/bin/bash
 
-AGE=20
-EXPECTED_KAZOE=$((AGE + 1))
+# 入力する値
+input_age="20"
+expected_kazoedoshi="21"
 
-EXPECTED=$(
-cat << EOF
-年齢を入力してください：
-あなたの数え年は${EXPECTED_KAZOE}歳です
-EOF
-)
+# 期待される出力
+expected=$(printf "年齢を入力してください：あなたの数え年は%s歳です\n" "$expected_kazoedoshi")
 
-OUT="$(
-python3 main.py << EOF
-$AGE
-EOF
-)"
+# main.py を実行して実際に出力を取得
+actual=$(printf "%s\n" "$input_age" | python3 main.py)
 
-# 改行コードゆれ対策（Windows CRLF対策）
-OUT="${OUT//$'\r'/}"
-
-LINE_COUNT=$(printf "%s\n" "$OUT" | wc -l | tr -d ' ')
-
-OK=true
-
-# プロンプトの後に半角スペースが入る可能性も許容
-PROMPT_PREFIX="年齢を入力してください："
-RESULT_LINE="あなたの数え年は${EXPECTED_KAZOE}歳です"
-
-if [ "$LINE_COUNT" -ge 2 ]; then
-  LINE1=$(printf "%s\n" "$OUT" | sed -n '1p')
-  LINE2=$(printf "%s\n" "$OUT" | sed -n '2p')
-
-  # 1行目はプロンプトだけ（末尾のスペースは許容）
-  [[ "$LINE1" == "$PROMPT_PREFIX"* ]] || OK=false
-  # 2行目は計算結果が正しいことを厳密にチェック
-  [[ "$LINE2" == "$RESULT_LINE" ]] || OK=false
+# 期待される出力と実際の出力を比較
+if [ "$actual" = "$expected" ]; then
+  echo "OK！次の問題に進みましょう！"
 else
-  # 1行出力の場合：プロンプト＋結果が同じ行に入っていればOK
-  [[ "$OUT" == "$PROMPT_PREFIX"*"$RESULT_LINE"* ]] || OK=false
-fi
-
-if [ "$OK" = false ]; then
-  echo "... 不正解です！"
-  echo "expected:"
-  echo "$EXPECTED"
-  echo
-  echo "actual:"
-  echo "$OUT"
+  echo "不正解！よく問題を読んで再度挑戦してください！"
+  echo "Expected:"
+  echo "$expected"
+  echo "Actual:"
+  echo "$actual"
   exit 1
 fi
-
-echo "... 正解です！次の問題に進みましょう！"

@@ -1,34 +1,23 @@
-#!/usr/bin/env bash
-EXPECTED=$(
-cat << 'EOF'
-1行目: 名前を入力してください：Hello、<name>!
-2行目: 年齢を入力してください: あなたの年齢は<age>歳です
-EOF
-)
+#!/bin/bash
 
-OUT="$(
-python3 main.py << 'EOF'
-TESTNAME
-99
-EOF
-)"
+# 入力する値
+input_name="Alice"
+input_age="20"
 
-LINE1=$(echo "$OUT" | sed -n '1p')
-LINE2=$(echo "$OUT" | sed -n '2p')
+# 期待される出力
+expected=$(printf "名前を入力してください：Hello, %s!\n年齢を入力してください：あなたの年齢は%s歳です\n" "$input_name" "$input_age")
 
-OK=true
+# main.py を実行して実際に出力を取得
+actual=$(printf "%s\n%s\n" "$input_name" "$input_age" | python3 main.py)
 
-[[ "$LINE1" == 名前を入力してください：Hello,*! ]] || OK=false
-[[ "$LINE2" == 年齢を入力してください：あなたの年齢は*歳です ]] || OK=false
-
-if [ "$OK" = false ]; then
-  echo "... 不正解です！"
-  echo "expected:"
-  echo "$EXPECTED"
-  echo
-  echo "actual:"
-  echo "$OUT"
+# 期待される出力と実際の出力を比較
+if [ "$actual" = "$expected" ]; then
+  echo "OK！次の問題に進みましょう！"
+else
+  echo "不正解！よく問題を読んで再度挑戦してください！"
+  echo "Expected:"
+  echo "$expected"
+  echo "Actual:"
+  echo "$actual"
   exit 1
 fi
-
-echo "... 正解です！次の問題に進みましょう！"
