@@ -1,19 +1,11 @@
 # Q01: File Write
-# ファイルに文字列を書き込んでみましょう
-with open("output.txt", "w", encoding="utf-8") as f:
-    f.write("Hello, Python!")
+# "output.txt" という名前のファイルに "Hello, Python!" という文字列を書き込んでください。文字コードはutf-8を使用してください。
+# ここにコードを書いてください
 
 # Q02: File Read
-# ファイルから内容を読み込んでみましょう
-with open("output.txt", "r", encoding="utf-8") as f:
-    content = f.read()
-    print(content)
+# "output.txt" ファイルから内容を読み込んで、その内容を表示してください。文字コードはutf-8を使用してください。
+# ここにコードを書いてください
 
 # Q03: File Append
-# ファイルに追記してみましょう
-with open("output.txt", "a", encoding="utf-8") as f:
-    f.write("\nThis is a new line.")
-with open("output.txt", "r", encoding="utf-8") as f:
-    content = f.read()
-    print(content)
-
+# "output.txt" ファイルに改行してから "This is a new line." という文字列を追記してください。その後、ファイル全体の内容を読み込んで表示してください。
+# ここにコードを書いてください

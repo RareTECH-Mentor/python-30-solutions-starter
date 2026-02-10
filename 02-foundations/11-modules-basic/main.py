@@ -1,22 +1,18 @@
 # 問１：標準ライブラリをimportしよう
+# mathライブラリをインポートし、math.sqrt() を使って25の平方根を計算し、結果を "25の平方根は...です" の形式で表示してください。
 # 以下に処理を記述してください
-import math
-print(f"25の平方根は{math.sqrt(25)}です")
 
 
 # 問２：モジュール内の特定のプログラムをimportしよう
+# mathライブラリからpiをインポートし、"円周率は...です" の形式で表示してください。
 # 以下に処理を記述してください
-from math import pi
-print(f"円周率は{pi}です")
 
 
 # 問３：asを使って別名をつけてみよう
+# randomライブラリをrという別名でインポートし、r.randint(1, 6) を使って1から6までのランダムな整数を生成して表示してください。
 # 以下に処理を記述してください
-import random as r
-print(r.randint(1, 6))
 
 
 # 問４：自作モジュールを作成しよう
+# greet.pyモジュールをインポートし、greet.hello() 関数を "Python" という引数で呼び出してください。
 # 以下に処理を記述してください
-import greet
-greet.hello("Python")

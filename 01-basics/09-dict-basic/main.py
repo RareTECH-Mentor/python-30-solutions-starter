@@ -15,13 +15,11 @@ def print_unfinished():
     print("未達成の科目:")
     # 以下に関数内で行う処理を書いてください。
     # ヒント：辞書をループする方法について調べましょう！
-    for subject, done in progress.items():
-        if done is False:
-            print(f"- {subject}")
+    pass
 
 
 # 2-2. print_unfinished関数を実行するコードを以下に記述してください。
-print_unfinished()
+
 
 
 # 問３
@@ -29,14 +27,11 @@ print_unfinished()
 def complete_subject(subject):
     # 以下に関数内で行う処理を書いてください。
     # 関数内で print() や return などは使用しないでください。
-    if subject in progress:
-        progress[subject] = True
+    pass
 
 
 ## 3-2. complete_subject関数を実行し、「Python」と「CSS」を達成済みに変更してください。
-complete_subject("Python")
-complete_subject("CSS")
 
 
-## 3-3. 再度print_unfinished関数を実行するコードを以下に記述してください。
-print_unfinished()
+
+## 3-3. 再度print_unfinished関数を実行するコードを以下に記述してくださ��。

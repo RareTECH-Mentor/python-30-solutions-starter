@@ -5,15 +5,14 @@ from flask import Flask
 
 app = Flask(__name__)
 
-@app.route('/')
-def hello_world():
-    return 'Hello, Flask!'
+# Q1: ルートURL ("/") にアクセスがあった場合に "Hello, Flask!" を返すエンドポイントを作成してください。
+# ここにコードを書いてください
 
-@app.route('/about')
-def about_page():
-    return 'This is the about page.'
 
-# このファイルが直接実行されたときにのみサーバーを起動するおまじない
-# (flask run コマンドを使う場合は不要ですが、python main.py で実行する際に便利です)
+# Q2: "/about" URLにアクセスがあった場合に "This is the about page." を返すエンドポイントを作成してください。
+# ここにコードを書いてください
+
+
+# このファイルが直接実行されたときにのみサーバーを起動する
 if __name__ == '__main__':
     app.run(debug=True)

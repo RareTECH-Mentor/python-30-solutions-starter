@@ -1,6 +1,8 @@
 import json
 
 # Q1: PythonオブジェクトをJSONファイルに書き出す
+# `data` ディクショナリを `data.json` という名前のファイルにJSON形式で書き出してください。
+# インデントを4スペースに設定してください。
 data = {
     "name": "John Doe",
     "age": 30,
@@ -10,15 +12,10 @@ data = {
         {"title": "Math", "credits": 4}
     ]
 }
+# ここにコードを書いてください
 
-with open('data.json', 'w', encoding='utf-8') as f:
-    json.dump(data, f, indent=4)
-
-print("data.json has been created.")
 
 # Q2: JSONファイルを読み込んでPythonオブジェクトに変換する
-with open('data.json', 'r', encoding='utf-8') as f:
-    loaded_data = json.load(f)
-
-name = loaded_data.get("name")
-print(f"Name: {name}")
+# `data.json` ファイルを読み込み、内容をPythonオブジェクトに変換してください。
+# そのオブジェクトから "name" の値を抽出し、"Name: ..." の形式で表示してください。
+# ここにコードを書いてください

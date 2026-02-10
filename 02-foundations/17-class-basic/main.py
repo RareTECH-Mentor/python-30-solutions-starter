@@ -1,16 +1,13 @@
 # 問２：インスタンスを作成してみよう
+# person.py の Person クラスをインポートし、
+# 名前 "次郎"、年齢 20 でインスタンスを作成してください。
+# そのインスタンスを使って say_hello() と introduce() メソッドを呼び出してください。
 # 以下に処理を記述してください
-from person import Person
-
-person1 = Person("次郎", 20)
-person1.say_hello()
-person1.introduce()
 
 
 # 問４：戻り値を出力しよう
+# rectangle.py の Rectangle クラスをインポートし、
+# 幅 3、高さ 4 でインスタンスを作成してください。
+# area() メソッドを呼び出して面積を計算し、
+# "辺の長さが...と...の四角の面積は...です" の形式で表示してください。
 # 以下に処理を記述してください
-from rectangle import Rectangle
-
-rectangle1 = Rectangle(3, 4)
-area = rectangle1.area()
-print(f"辺の長さが{rectangle1.width}と{rectangle1.height}の四角の面積は{area}です")

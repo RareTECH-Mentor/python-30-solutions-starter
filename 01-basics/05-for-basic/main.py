@@ -1,3 +1,2 @@
+# forループを使用して "Hello Python" を5回出力するプログラムを作成してください。
 # 以下に処理を記述してください
-for i in range(5):
-    print(f"{i + 1}：Hello Python")

@@ -9,29 +9,21 @@ API_URL = f"https://jsonplaceholder.typicode.com/users/{USER_ID}/todos"
 OUTPUT_FILE = "completed_todos.json"
 
 def main():
-    try:
-        # 1. データを取得する
-        response = requests.get(API_URL)
-        response.raise_for_status()
-        todos = response.json()
-
-        # 2. データをフィルタリングする
-        completed_todos = [
-            todo for todo in todos if todo.get("completed")
-        ]
-
-        # 3. ファイルに保存する
-        with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
-            json.dump(completed_todos, f, indent=2)
-
-        # 4. 結果を出力する
-        num_completed = len(completed_todos)
-        print(f"Successfully saved {num_completed} completed todos to {OUTPUT_FILE}.")
-
-    except requests.exceptions.RequestException as e:
-        print(f"Error fetching data: {e}")
-    except IOError as e:
-        print(f"Error writing to file: {e}")
+    # このミニプロジェクトでは、以下の処理を実装します。
+    # 1. APIからデータを取得する
+    #    - `API_URL` に対してGETリクエストを送信し、ToDoリストを取得します。
+    # 2. データをフィルタリングする
+    #    - 取得したToDoリストの中から、"completed" が true のものだけを抽出します。
+    # 3. ファイルに保存する
+    #    - 抽出した完了済みのToDoリストを、`OUTPUT_FILE` にJSON形式で保存します。
+    #      （インデントは2スペースに設定）
+    # 4. 結果を出力する
+    #    - "Successfully saved {完了したToDoの数} completed todos to {出力ファイル名}."
+    #      というメッセージを表示します。
+    #
+    # APIリクエストやファイル書き込みでエラーが発生した場合の例外処理も実装してください。
+    # ここにコードを書いてください
+    pass
 
 
 if __name__ == "__main__":

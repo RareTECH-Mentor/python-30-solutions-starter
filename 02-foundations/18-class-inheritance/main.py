@@ -1,34 +1,27 @@
 # Q01: Base Class
-# 基底クラスを定義してみましょう
+# "Dog" という名前で Animal クラスのインスタンスを作成し、
+# speak() メソッドを呼び出して結果を表示してください。
 class Animal:
     def __init__(self, name):
         self.name = name
 
     def speak(self):
         return f"{self.name} makes a sound"
+# ここにコードを書いてください
 
-animal = Animal("Dog")
-print(animal.speak())
 
 # Q02: Inheritance
-# クラスを継承してみましょう
-class Dog(Animal):
-    def speak(self):
-        return f"{self.name} barks"
+# Animal クラスを継承した Dog クラスを定義してください。
+# speak() メソッドをオーバーライドして、"{name} barks" を返すようにしてください。
+# "Buddy" という名前で Dog クラスのインスタンスを作成し、
+# speak() メソッドを呼び出して結果を表示してください。
+# ここにコードを書いてください
 
-dog = Dog("Buddy")
-print(dog.speak())
 
 # Q03: Multiple Inheritance
-# 複数のメソッドを持つ継承クラスを作成してみましょう
-class Cat(Animal):
-    def speak(self):
-        return f"{self.name} meows"
-
-    def purr(self):
-        return f"{self.name} purrs"
-
-cat = Cat("Whiskers")
-print(cat.speak())
-print(cat.purr())
-
+# Animal クラスを継承した Cat クラスを定義してください。
+# speak() メソッドをオーバーライドして、"{name} meows" を返すようにしてください。
+# さらに、"{name} purrs" を返す purr() メソッドを追加してください。
+# "Whiskers" という名前で Cat クラスのインスタンスを作成し、
+# speak() と purr() メソッドを呼び出して結果を表示してください。
+# ここにコードを書いてください

@@ -7,32 +7,29 @@ db_name = 'company.db'
 if os.path.exists(db_name):
     os.remove(db_name)
 
-conn = sqlite3.connect(db_name)
-cursor = conn.cursor()
+# Q1: データベースに接続し、テーブルを作成してください。
+# データベース名: company.db
+# テーブル名: employees
+# カラム:
+#   - id: INTEGER, PRIMARY KEY
+#   - name: TEXT, NOT NULL
+#   - position: TEXT, NOT NULL
+# ここにコードを書いてください
 
-# テーブル作成
-cursor.execute('''
-CREATE TABLE IF NOT EXISTS employees (
-    id INTEGER PRIMARY KEY,
-    name TEXT NOT NULL,
-    position TEXT NOT NULL
-)
-''')
 
-# データ挿入
-employees_to_add = [
-    (1, 'Alice', 'Software Engineer'),
-    (2, 'Bob', 'Project Manager')
-]
-cursor.executemany('INSERT INTO employees (id, name, position) VALUES (?, ?, ?)', employees_to_add)
+# Q2: テーブルにデータを挿入してください。
+# 挿入するデータ:
+#   - (1, 'Alice', 'Software Engineer')
+#   - (2, 'Bob', 'Project Manager')
+# executemany を使用してください。
+# ここにコードを書いてください
 
-conn.commit()
 
-# データ取得
-cursor.execute('SELECT * FROM employees ORDER BY id')
-all_employees = cursor.fetchall()
+# Q3: データを取得して表示してください。
+# employees テーブルから全てのデータをid順で取得し、
+# 各行をタプルのまま表示してください。
+# ここにコードを書いてください
 
-for row in all_employees:
-    print(row)
 
-conn.close()
+# Q4: データベース接続を閉じてください。
+# ここにコードを書いてください

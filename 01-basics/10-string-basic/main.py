@@ -1,18 +1,14 @@
 # Q01: String Split
-# 文字列をsplit()メソッドで分割してみましょう
+# "apple,banana,orange"という文字列をカンマで分割してリストを作成し、表示してください。
 text = "apple,banana,orange"
-fruits = text.split(",")
-print(fruits)
+# ここにコードを書いてください
 
 # Q02: String Join
-# リストをjoin()メソッドで結合してみましょう
+# ["Hello", "World", "Python"] というリストの要素をスペースで結合して、"Hello World Python" という文字列を作成し、表示してください。
 words = ["Hello", "World", "Python"]
-result = " ".join(words)
-print(result)
+# ここにコードを書いてください
 
 # Q03: Split and Join
-# 文字列を分割して、別の区切り文字で結合してみましょう
+# "one-two-three"という文字列をハイフンで分割し、アンダースコアで結合して "one_two_three" という文字列を作成し、表示してください。
 sentence = "one-two-three"
-parts = sentence.split("-")
-new_sentence = "_".join(parts)
-print(new_sentence)
+# ここにコードを書いてください

@@ -5,20 +5,8 @@
 import requests
 
 # Q1: requestsライブラリを使ってAPIからデータを取得し、タイトルを表示する
-
-url = "https://jsonplaceholder.typicode.com/todos/1"
-
-try:
-    response = requests.get(url)
-    response.raise_for_status()
-    todo_item = response.json()
-    title = todo_item.get("title")
-    print(f"Title: {title}")
-
-except requests.exceptions.RequestException as e:
-    print(f"An error occurred: {e}")
-    print("Did you install the 'requests' library in your virtual environment?")
-
-except ImportError:
-    print("Error: 'requests' module not found.")
-    print("Please activate your virtual environment and install it using 'pip install requests'.")
+# `https://jsonplaceholder.typicode.com/todos/1` に対してGETリクエストを送信してください。
+# レスポンスのJSONから "title" の値を抽出し、"Title: ..." の形式で表示してください。
+# requestsライブラリがインストールされていない場合や、その他のリクエストエラーを考慮した
+# 例外処理を追加してください。
+# ここにコードを書いてください

@@ -1,20 +1,9 @@
 import requests
 
 # Q1: GETリクエストを送信してJSONデータを取得する
-
-url = "https://jsonplaceholder.typicode.com/users/1"
-
-try:
-    response = requests.get(url)
-    response.raise_for_status()  # ステータスコードが200番台でなければエラーを発生
-
-    user_data = response.json()
-
-    name = user_data.get("name")
-    email = user_data.get("email")
-
-    print(f"Name: {name}")
-    print(f"Email: {email}")
-
-except requests.exceptions.RequestException as e:
-    print(f"An error occurred: {e}")
+# `https://jsonplaceholder.typicode.com/users/1` に対してGETリクエストを送信してください。
+# レスポンスが正常（ステータスコード200番台）であることを確認してください。
+# レスポンスボディをJSONとしてパースし、ユーザーの `name` と `email` を取得して、
+# "Name: ..." と "Email: ..." の形式で表示してください。
+# エラーが発生した場合は、"An error occurred: ..." の形式でエラーメッセージを表示してください。
+# ここにコードを書いてください

@@ -1,14 +1,12 @@
 # Q1: `map` と `lambda` で数値リストを変換する
+# `numbers_q1` の各要素を2乗した新しいリスト `squared_numbers` を作成し、表示してください。
+# `map` と `lambda` を使用してください。
 numbers_q1 = [1, 2, 3, 4, 5]
-
-# map()はイテレータを返すため、list()でリストに変換する
-squared_numbers = list(map(lambda x: x**2, numbers_q1))
-print(squared_numbers)
+# ここにコードを書いてください
 
 
 # Q2: `filter` と `lambda` で条件に合う要素を抽出する
+# `numbers_q2` から偶数のみを抽出した新しいリスト `even_numbers` を作成し、表示してください。
+# `filter` と `lambda` を使用してください。
 numbers_q2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
-# filter()もイテレータを返すため、list()でリストに変換する
-even_numbers = list(filter(lambda x: x % 2 == 0, numbers_q2))
-print(even_numbers)
+# ここにコードを書いてください
