@@ -1,4 +1,10 @@
 # 問１の辞書型データを以下に定義してください。
+progress = {
+    "Python": False,
+    "HTML": True,
+    "CSS": False,
+    "JavaScript": False
+}
 
 
 # 問２
@@ -9,21 +15,28 @@ def print_unfinished():
     print("未達成の科目:")
     # 以下に関数内で行う処理を書いてください。
     # ヒント：辞書をループする方法について調べましょう！
+    for subject, done in progress.items():
+        if done is False:
+            print(f"- {subject}")
 
 
 # 2-2. print_unfinished関数を実行するコードを以下に記述してください。
+print_unfinished()
 
 
 # 問３
 # 3-1. 未達成の科目を達成済みに変更する関数の定義。
-# 「未達成 → 達成済み」 に更新するだけなので、関数内で print() や return などは使用しないでください。
 def complete_subject(subject):
-    # 以下に関数内で行う処理を書いてください
+    # 以下に関数内で行う処理を書いてください。
+    # 関数内で print() や return などは使用しないでください。
+    if subject in progress:
+        progress[subject] = True
 
 
-## 3-2. complete_subject関数を実行するコードを以下に記述してください。
+## 3-2. complete_subject関数を実行し、「Python」と「CSS」を達成済みに変更してください。
+complete_subject("Python")
+complete_subject("CSS")
 
 
 ## 3-3. 再度print_unfinished関数を実行するコードを以下に記述してください。
-
-
+print_unfinished()
