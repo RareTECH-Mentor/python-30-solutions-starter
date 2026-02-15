@@ -3,3 +3,9 @@ Pythonの初心者向けドリルです。
 30問、それぞれ大事な内容なので、RareTECH生はスラスラ書けるようになりましょう。
 
 それぞれの問題のディレクトリの中にREADMEファイルがありますので、しっかり読んで問題に挑んでください。
+
+
+ローカルでクローンをしてください。
+```
+git clone git@github.com:RareTECH-Mentor/python-30-solutions-starter.git
+```
