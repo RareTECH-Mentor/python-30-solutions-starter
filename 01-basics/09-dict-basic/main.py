@@ -34,4 +34,4 @@ def complete_subject(subject):
 
 
 
-## 3-3. 再度print_unfinished関数を実行するコードを以下に記述してくださ��。
+## 3-3. 再度print_unfinished関数を実行するコードを以下に記述してください。

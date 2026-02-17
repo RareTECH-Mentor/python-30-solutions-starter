@@ -15,7 +15,7 @@
   - ログレベルを `INFO` に設定してください。これにより、`INFO` 以上のレベルのメッセージが表示されるようになります。
   - ログのフォーマットを `%(levelname)s:%(message)s` に設定してください。
 - 設定後、以下の2つのログメッセージを出力してください。
-  1. `INFO` レベルで `"Processing data..."` ���いうメッセージ
+  1. `INFO` レベルで `"Processing data..."` というメッセージ
   2. `WARNING` レベルで `"Something unexpected happened."` というメッセージ
 
 ### 期待される出力

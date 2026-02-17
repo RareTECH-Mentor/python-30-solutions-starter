@@ -25,7 +25,7 @@ pip install requests
 - `requests.get()` を使って、以下のURLにGETリクエストを送信します。
   `https://jsonplaceholder.typicode.com/users/1`
 - レスポンスが成功したか（ステータスコードが200番台か）を確認します。
-- レスポンスボディをJSON形式でパースし、Pythonの辞書オブ��ェクトに変換します。
+- レスポンスボディをJSON形式でパースし、Pythonの辞書オブジェクトに変換します。
 - 変換したオブジェクトから `name` と `email` の値を取得し、以下の形式で標準出力に表示してください。
   ```
   Name: Leanne Graham
